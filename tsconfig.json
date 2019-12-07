@@ -2,7 +2,6 @@
   "compilerOptions": {
     "outDir": "./dist",
     "declarationDir": "./dist/typings",
-    "lib": ["dom"],
     "moduleResolution": "node",
     "removeComments": true,
     "sourceMap": true,
@@ -14,8 +13,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": "typings",
-    "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types", "./typings"]
+    "resolveJsonModule": true
   },
   "files": ["./src/cli.ts"]
 }
