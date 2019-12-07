@@ -1,0 +1,49 @@
+{
+  "name": "@delangle/lib-builder",
+  "version": "1.0.0",
+  "description": "JS lib builder",
+  "private": false,
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/typings/index.d.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "type:coverage": "tscov -d",
+    "lint": "eslint \"src/**\"",
+    "build": "tsc"
+  },
+  "bin": "dist/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviendelangle/lib-builder.git"
+  },
+  "author": "Flavien DELANGLE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaviendelangle/lib-builder/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "homepage": "https://github.com/flaviendelangle/lib-builder#readme",
+  "dependencies": {
+    "cac": "^6.5.3",
+    "rollup": "^1.27.8",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {
+    "@habx/eslint-config-client": "^2.0.6",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.0.1"
+  }
+}
